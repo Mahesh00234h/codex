@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- App Info -->
+    <title>Farmaline - Smart Agricultural Platform</title>
+    <meta name="description" content="AI-powered farmer domain agent for crop planning, disease detection, weather, markets, schemes, and farm operations." />
+    <meta name="author" content="Farmaline" />
+    <meta name="keywords" content="agriculture, farming, domain agent, disease detection, weather, crops, farmaline" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Farmaline" />
+    <meta name="application-name" content="Farmaline" />
+    <meta name="msapplication-TileColor" content="#16a34a" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pwa-icon-512.png" />
+    <link rel="apple-touch-icon" href="/pwa-icon-192.png" />
+    <link rel="mask-icon" href="/pwa-icon-512.png" color="#16a34a" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Farmaline - Smart Agricultural Platform" />
+    <meta property="og:description" content="AI-powered farmer domain agent for agriculture decisions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/pwa-icon-512.png" />
+    <meta property="og:site_name" content="Farmaline" />
+    <meta property="og:url" content="https://farmaline.works" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Farmaline - Smart Agricultural Platform" />
+    <meta name="twitter:description" content="AI-powered farmer domain agent for agriculture decisions" />
+    <meta name="twitter:image" content="/pwa-icon-512.png" />
+    
+    <!-- Preconnect to APIs -->
+    <link rel="preconnect" href="https://hxxousohrhrdrvmsxvdu.supabase.co" />
+    
+    <!-- Safe area insets for notched devices -->
+    <style>
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sar: env(safe-area-inset-right);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+      }
+      body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Farmaline Design System - Agricultural Technology Platform
+   Rural-friendly, nature-inspired, accessible design */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Core Background - Warm cream tones */
+    --background: 45 30% 97%;
+    --foreground: 150 25% 15%;
+
+    /* Card surfaces - Soft whites */
+    --card: 45 25% 99%;
+    --card-foreground: 150 25% 15%;
+
+    /* Popover */
+    --popover: 45 25% 99%;
+    --popover-foreground: 150 25% 15%;
+
+    /* Primary - Fresh Farm Green */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Earthy Terracotta */
+    --secondary: 24 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Soft sage */
+    --muted: 140 15% 92%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Accent - Golden Harvest */
+    --accent: 43 96% 56%;
+    --accent-foreground: 30 50% 15%;
+
+    /* Destructive - Warning Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success - Vibrant Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 30 50% 15%;
+
+    /* Info - Sky Blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 140 15% 85%;
+    --input: 140 15% 90%;
+    --ring: 142 71% 45%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 142 40% 97%;
+    --sidebar-foreground: 150 25% 15%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 30% 92%;
+    --sidebar-accent-foreground: 150 25% 15%;
+    --sidebar-border: 140 15% 85%;
+    --sidebar-ring: 142 71% 45%;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142, 71%, 45%) 0%, hsl(152, 76%, 36%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(24, 60%, 50%) 0%, hsl(16, 70%, 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(43, 96%, 56%) 0%, hsl(38, 92%, 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(142, 71%, 45%, 0.1) 0%, hsla(45, 30%, 97%, 0) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(45, 25%, 99%) 0%, hsl(45, 20%, 96%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsla(150, 25%, 15%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(150, 25%, 15%, 0.08), 0 2px 4px -2px hsla(150, 25%, 15%, 0.05);
+    --shadow-lg: 0 10px 15px -3px hsla(150, 25%, 15%, 0.1), 0 4px 6px -4px hsla(150, 25%, 15%, 0.05);
+    --shadow-xl: 0 20px 25px -5px hsla(150, 25%, 15%, 0.1), 0 8px 10px -6px hsla(150, 25%, 15%, 0.05);
+    --shadow-glow: 0 0 40px hsla(142, 71%, 45%, 0.25);
+  }
+
+  .dark {
+    --background: 150 25% 8%;
+    --foreground: 45 25% 95%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 45 25% 95%;
+
+    --popover: 150 20% 12%;
+    --popover-foreground: 45 25% 95%;
+
+    --primary: 142 71% 50%;
+    --primary-foreground: 150 25% 8%;
+
+    --secondary: 24 55% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 140 10% 60%;
+
+    --accent: 43 90% 55%;
+    --accent-foreground: 30 50% 10%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 18%;
+    --ring: 142 71% 50%;
+
+    --sidebar-background: 150 20% 10%;
+    --sidebar-foreground: 45 25% 95%;
+    --sidebar-primary: 142 71% 50%;
+    --sidebar-primary-foreground: 150 25% 8%;
+    --sidebar-accent: 150 15% 18%;
+    --sidebar-accent-foreground: 45 25% 95%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 142 71% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero section styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply backdrop-blur-md;
+    background: hsla(45, 25%, 99%, 0.8);
+    border: 1px solid hsla(140, 15%, 85%, 0.5);
+  }
+
+  .dark .glass {
+    background: hsla(150, 20%, 12%, 0.8);
+    border: 1px solid hsla(150, 15%, 20%, 0.5);
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Icon container */
+  .icon-container {
+    @apply flex items-center justify-center rounded-xl p-3;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Status badges */
+  .badge-success {
+    @apply bg-success text-success-foreground;
+  }
+
+  .badge-warning {
+    @apply bg-warning text-warning-foreground;
+  }
+
+  .badge-info {
+    @apply bg-info text-info-foreground;
+  }
+
+  /* Feature card */
+  .feature-card {
+    @apply relative overflow-hidden rounded-2xl p-6 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+  }
+
+  /* Farmer-friendly large touch targets - Mobile First */
+  .touch-target {
+    @apply min-h-[52px] min-w-[52px] p-3;
+  }
+
+  /* Larger buttons for mobile */
+  .btn-mobile {
+    @apply min-h-[48px] px-5 py-3 text-base font-medium;
+  }
+
+  /* Mobile-first card */
+  .mobile-card {
+    @apply rounded-2xl p-4 bg-card border border-border;
+    touch-action: manipulation;
+  }
+
+  /* Map container styles */
+  .map-container {
+    @apply rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Mobile-optimized spacing */
+  .mobile-section {
+    @apply px-4 py-5;
+  }
+
+  /* Stack on mobile, row on larger */
+  .mobile-stack {
+    @apply flex flex-col gap-3;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-stack {
+      @apply flex-row items-center;
+    }
+  }
+
+  /* Mobile-first grid */
+  .mobile-grid {
+    @apply grid grid-cols-2 gap-3;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-grid {
+      @apply grid-cols-4 gap-4;
+    }
+  }
+
+  /* Full-width button on mobile */
+  .mobile-full-btn {
+    @apply w-full sm:w-auto;
+  }
+}
+
+@layer utilities {
+  /* Gradient text */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  /* Animate on scroll */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Stagger children animation */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+}
+
+/* Leaflet map overrides - Critical for map rendering */
+.leaflet-container {
+  @apply rounded-2xl font-sans;
+  z-index: 1;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Fix for leaflet marker icons */
+.leaflet-default-icon-path {
+  background-image: url(https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png);
+}
+
+/* Ensure map container has proper dimensions */
+.map-wrapper {
+  height: 400px;
+  min-height: 400px;
+  position: relative;
+}
+
+.leaflet-control-zoom {
+  @apply border-0 overflow-hidden rounded-xl;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.leaflet-control-zoom a {
+  @apply bg-card text-foreground border-0;
+}
+
+.leaflet-control-zoom a:hover {
+  @apply bg-muted;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply rounded-xl;
+  box-shadow: var(--shadow-lg) !important;
+}

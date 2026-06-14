@@ -1,0 +1,46 @@
+project_id = "nqevyteyaouxnopoupai"
+
+[functions.auth-register]
+verify_jwt = false
+
+[functions.weather]
+verify_jwt = false
+
+[functions.disease-detection]
+verify_jwt = false
+
+[functions.crop-recommendation]
+verify_jwt = false
+
+[functions.scheme-explanation]
+verify_jwt = false
+
+[functions.market-insights]
+verify_jwt = false
+
+[functions.quality-analysis]
+verify_jwt = false
+
+[functions.send-push-notification]
+verify_jwt = false
+
+[functions.gov-schemes]
+verify_jwt = false
+
+[functions.get-route-directions]
+verify_jwt = false
+
+[functions.ai-agent]
+verify_jwt = false
+
+[functions.smart-suggestions]
+verify_jwt = false
+
+[functions.send-email-otp]
+verify_jwt = false
+
+[functions.verify-email-otp]
+verify_jwt = false
+
+[functions.translate-text]
+verify_jwt = false
